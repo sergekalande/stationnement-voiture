@@ -1,0 +1,15 @@
+name: stationnement_voiture
+version: 0.1.0
+author: sergekalande 'ghino_2006@yahoo.fr'
+description: Un jeu Dart avec un modèle basé sur le jeu Rush Hour.
+homepage: http://ondart.me/
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+documentation: git hub dzenanr
+dependencies:
+  browser: any
+  paper_elements: '>=0.6.1 <0.7.0'
+  polymer: '>=0.15.4 <0.16.0'
+transformers:
+- polymer:
+    entry_points: web/index.html

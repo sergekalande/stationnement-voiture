@@ -1,0 +1,127 @@
+GitHub
+
+https://github.com/
+http://git-scm.com/videos
+
+Education
+
+https://github.com/edu
+
+Create an account at GitHub.
+
+Read:
+
+http://help.github.com/win-set-up-git/
+
+http://www.ralfebert.de/blog/tools/git_screencast/
+
+http://scottr.org/presentations/git-in-5-minutes/
+
+---------------------------------------------------------------------
+
+Après avoir créé un compte, créer un dépôt distant.
+Ce qui suit est ce que j'ai fait pour stationnement_voiture.
+
+http://help.github.com/create-a-repo/
+
+Create a New Repository
+Nom du Projet: stationnement_voiture
+Description: Un jeu Dart avec un modèle basé sur le jeu Rush Hour.    
+
+----------------------------------------------------------------------
+
+Git with Git Bash
+
+Configure yourself (once for all repositories)
+
+  git config --global user.name "sergekalande"
+  git config --global user.email ghino_2006@yahoo.fr
+
+Clone a remote repository into a local repository.
+
+cd git/dart/learn
+
+Read+Write:
+git clone git@github.com:sergekalande/stationnement_voiture.git
+
+
+Ignoring files
+
+http://help.github.com/ignore-files/
+
+create .gitignore in stationnement_voiture folder
+with the following content:
+
+stationnement_voiture.dart.js
+*~
+
+to exclude JavaScript file and backup files on Linux
+
+
+Read only:
+git clone git://github.com/sergekalande/stationnement_voiture.git
+
+
+Get the latest changes from the remote repository
+
+git pull
+git pull origin master
+
+---------------------------------------------------------------------
+
+Work with a local repository
+
+cd git/dart/learn/stationnement_voiture
+
+git add .
+
+git status
+
+git commit -m 'petite description'
+
+git status
+
+git push
+git push origin master
+Enter passphrase for key ... :
+
+git status
+
+---------------------------------------------------------------------
+
+Tagging for versions (spirals)
+
+http://learn.github.com/p/tagging.html
+
+git tag
+git tag -a s00 -m 'spiral 00'
+git tag
+
+To push tags to the remote repository:
+
+git push --tags
+Enter passphrase for key ... :
+
+---------------------------------------------------------------------
+
+Switching from master to spiral
+
+from master to tag
+git checkout s01
+from tag to branch
+git checkout -b s01a
+to use branch
+git checkout s01a
+
+
+Switching from spiral to master
+
+to exclude js:
+git checkout CarParking.dart.js
+or 
+(see http://scottr.org/presentations/git-in-5-minutes/)
+git stash
+
+git checkout master
+
+
